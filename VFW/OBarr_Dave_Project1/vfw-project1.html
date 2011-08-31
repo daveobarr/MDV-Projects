@@ -17,8 +17,64 @@
 	
 	<body>
 			<header id="titlebar">
-				<h1>Lighting Ordering List</h1>
-				<h3>PLease Complete and Submit Before 2pm</h3>
+				<h1>Lighting Order List</h1>
+				<h4>Please Complete and Submit Before 2pm</h3>
 			</header>
 		
-		
+<fieldset id="main">
+	        <legend> LAMPS & BALLASTS </legend>
+			<form action="form_action.asp" method="post" id="paper">
+					
+				
+				<label for="lamp type">Lamp Type</label><br/>
+				<select id="lamp type">
+					<option value="incandescent">Incandescent</option>
+					<option value="fluorescent">Fluorescent</option>
+					<option value="hid">HID</option>
+					<option value="metal halide">Metal Halide</option>
+					
+     	  		</select><br/>
+     	  
+				<br/>
+				
+				<label for="ballast type">Ballast Types</label><br/>
+  				<select id ="ballast type">
+  			  		<option value="fluorescent">Fluorescent</option>
+  			  		<option value="hid">HID</option>
+  			  		<option value="metal halide">Metal Halide</option>
+  			 	</select><br/>
+  			 	<br/>
+  			 	
+  			 	<label for="your name">Your Name</label>
+  				<input type="text" name="your name" size="30" value="Enter Name Here" id="your name"/><br />
+  				<br/>
+				
+				<label for="quantities">Quantity</label><br/>
+				<input type="range" name="rating" min="1" max="1000" value="1" id="quantity" /><br />
+  				<br/>
+  				
+  				<label for="pick up">Pick Up</label>
+  				<input type ="checkbox" name="pick up" id="pick up" />
+  				<br/><br/>
+
+				<label for="deliver">Deliver</label>
+  				<input type ="checkbox" name="deliver" id="deliver" />
+  				<br/><br/>
+  				
+  				
+  				<label for="date required">Date Required</label>
+  				<input type ="date" name="date required" value="09/01/2011" id="date required"/><br/>
+  				<br/>
+  				
+  				<label for="comments">Comments</label>
+  				<textarea rows="10" cols="30" id="comments" ></textarea><br/>
+ 	 			<br/>
+ 	 			
+ 	 			<center><input type="submit" value="PLACE ORDER" /></center>
+ 	 			<br/>
+ 	 			
+ 	 			</form>
+		</fieldset>	
+		<script type="text/javascript" src="js/myScript.js"></script>
+	</body>
+</html>
