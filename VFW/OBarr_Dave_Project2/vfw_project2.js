@@ -1,7 +1,7 @@
-// SDI Project 4
-// Term 1108
-// Dave O'Barr
-// August 25, 2011
+/*	VFW Project 2
+	Term 1109
+	Dave O'Barr
+	September 8, 2011 */
 
 
 /* Exercise 1 Does a string follow a 123-456-7890 pattern like a phone number? */
