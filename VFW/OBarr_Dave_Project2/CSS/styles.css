@@ -21,6 +21,11 @@ body {
     line-height: 1.5em;
 }
 
+#clear {
+	display: none; margin: 15px;}
+	#clear a { color: #900; 
+}
+
 h1 {
     background-color: #2C5197;
     color: #E1DFD3;

@@ -4,44 +4,47 @@
 	September 8, 2011 */
 
 window.onload = getItems();
-
 function getItems(){
+	if (localStorage.getItem('applampType')){
+	var lampType = 		localStorage.getItem('applampType');
+	var wattage = 		localStorage.getItem('appwattage');
+	var yourName = 		localStorage.getItem('appyourName');
+	var quantity = 		localStorage.getItem('appquantity');
+	var delivery = 		localStorage.getItem('appdelivery');
+	var dateRequired = 	localStorage.getItem('appdateRequired');
+	var comments = 		localStorage.getItem('comments');
 
-if (localStorage.getItem('applampType')){
+	var viewOrder = [
+		lampType,
+		wattage,
+		yourName,
+		quantity,
+		delivery,
+		dateRequired,
+		comments
+];
 
-var lampType = 		localStorage.getItem('applampType');
-var wattage = 		localStorage.getItem('appwattage');
-var yourName = 		localStorage.getItem('appyourName');
-var quantity = 		localStorage.getItem('appquantity');
-var delivery = 		localStorage.getItem('appdelivery');
-var dateRequired = 	localStorage.getItem('appdateRequired');
-var comments = 		localStorage.getItem('comments');
+document.getElementById('main').style.display = 'none';
 
-var viewOrder = [
-	lampType,
-	wattage,
-	yourName,
-	quantity,
-	delivery,
-	dateRequired,
-	comments
-];	
+	var clearLink = document.getElementById('clear');
+		clearLink.style.display = 'block';	
 
-alert(viewOrder);	
-}
+alert(viewOrder);
+	}
+
 };
 
 
 function storeItems(id) {
 
-var lampType = 		document.getElementById("lampType").value;
-var wattage = 		document.getElementById("wattage").value;
-var yourName = 		document.getElementById('yourName').value;
-var quantity = 		document.getElementById("quantity").value;
-var delivery = 		document.getElementById("delivery").value;
-var dateRequired = 	document.getElementById("dateRequired").value;
-var comments = 		document.getElementById("comments").value;
-		
+	var lampType = 		document.getElementById('lampType').value;
+	var wattage = 		document.getElementById('wattage').value;
+	var yourName = 		document.getElementById('yourName').value;
+	var quantity = 		document.getElementById('quantity').value;
+	var delivery = 		document.getElementById('delivery').value;
+	var dateRequired = 	document.getElementById('dateRequired').value;
+	var comments = 		document.getElementById('comments').value;
+			
 		localStorage.setItem('applampType',lampType);
 		localStorage.setItem('appwattage',wattage);
 		localStorage.setItem('appyourName',yourName);
@@ -49,10 +52,18 @@ var comments = 		document.getElementById("comments").value;
 		localStorage.setItem('appdelivery',delivery);
 		localStorage.setItem('appdateRequired',dateRequired);
 		localStorage.setItem('comments',comments);
+		
+alert("Saved");
+		
+		
 
-alert("Saved�");
+	
 };
 
+function clearLocal() {
+	localStorage.clear();
+	return false;
+};
 
 
 

@@ -19,7 +19,7 @@
 	<body>
 			<header id="titlebar">
 				<h1>Lighting Order List</h1>
-				<h4>Please Complete and Submit Before 2pm</h3>
+				<h4>Please Complete and Submit Before 2pm</h4>
 			</header>
 		
 <fieldset id="main">
@@ -73,10 +73,12 @@
  	 			<p id="submit"><input type="submit" value="PLACE ORDER" /></p>
  	 			<br/>
  	 			
- 	 			<a href="#" id="clearLocal">Clear Form</a>
- 	 			
  	 			</form>
 		</fieldset>	
+			<p id="clear">
+				<a onmouseover = "mouseHover();" onmouseout = "mouseOut();" href = "#" onclick = "clearLocal();
+				location.reload();">Clear Local Storage</a>
+			</p>
 		
 		<script type="text/javascript" src="js/main.js"></script>
 		
