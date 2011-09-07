@@ -1,31 +1,38 @@
-<!DOCTYPE HTML>
-<link rel=StyleSheet href="CSS/styles.css" type="text/css" media=screen/>
-
 <!--	
 		Dave O'Barr
-		VFW Projcet 1 Term 1109
--->
-					
-	<head>		
+		VFW Projcet 1 Term 1109 -->
+			
+
+<!DOCTYPE html>
+ 
+<link rel=StyleSheet href="styles.css" type="text/css" media=screen>
+
+		
+<title>Lighting List</title>	
+
+<html lang="">
 	
-		<title>Lighting List</title>
+<head>
 		<meta charset="utf-8">
 		<meta name = "description" content="Company Lighting Purchasing List" content="" />
-		<meta name = "keywords" content ="Incandescent, Fluorescent, HID, Metal Halide, Ballast, Bulbs, FIxtures," = "" />
-		<meta name ="robots" content = "index, follow" /> <!-- Search engines index this site and follow links -->
-	
-	</head>
+		<meta name = "keywords" content ="Incandescent, Fluorescent, HID, Metal Halide, Ballast, Bulbs, Fixtures," = "" />
+		<meta name ="robots" content = "index, follow" />
+</head>	
+
+		
+
 	
 	<body>
+		
+		<fieldset id="main">
 			<header id="titlebar">
 				<h1>Lighting Order List</h1>
-				<h4>Please Complete and Submit Before 2pm</h3>
+				<h4>Please Complete and Submit Before 2pm</h4>
 			</header>
 		
-<fieldset id="main">
+
 	        <legend> LAMPS &amp; BALLASTS </legend>
-			<form action="JavaScript:storeItems()" method="post" id="lighting">
-					
+			<form action="JavaScript:saveItems()" method="post" id="lighting">			
 				
 				<label for="lampType">Lamp Type</label><br/>
 				<select id="lampType">
@@ -53,7 +60,7 @@
   				<input type="text" name="yourName" size="30" value="Enter Name Here" id="yourName"/><br />
   				<br/>
 				
-				<label for="quantitiy">Quantity</label><br/>
+				<label for="quantity">Quantity</label><br/>
 				<input type="range" name="rating" min="1" max="1000" value="1" id="quantity" /><br />
   				<br/>
   				
@@ -70,15 +77,17 @@
   				<textarea rows="10" cols="30" id="comments" ></textarea><br/>
  	 			<br/>
  	 			
- 	 			<p id="submit"><input type="submit" value="PLACE ORDER" /></p>
+ 	 			<p id="submit"><input type="submit" value="PLACE ORDER" />
  	 			<br/>
  	 			
  	 			<a href="#" id="clearLocal">Clear Form</a>
  	 			
  	 			</form>
 		</fieldset>	
-		
 		<script type="text/javascript" src="js/main.js"></script>
-		
+		<script>getItems();</script>
 	</body>
+
+
 </html>
+
