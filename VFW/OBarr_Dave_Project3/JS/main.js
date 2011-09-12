@@ -47,11 +47,11 @@ function storeItems(id) {
 			
 		localStorage.setItem('applampType',lampType);
 		localStorage.setItem('appwattage',wattage);
-		localStorage.setItem('appName',yourName);
+		localStorage.setItem('appyourName',yourName);
 		localStorage.setItem('appquantity',quantity);
 		localStorage.setItem('appdelivery',delivery);
 		localStorage.setItem('appdateRequired',dateRequired);
-		localStorage.setItem('comments',comments);
+		localStorage.setItem('appcomments',comments);
 		
 //alert("Saved");
 		
@@ -65,51 +65,53 @@ function clearLocal() {
 	return false;
 };
 
-
 function validateForm () {
 	var getlampType = document.forms [0] ['lampType'].value;
-		if (getlampType == ' ') {
+		if (getlampType.length < 1) {
 			document.getElementById('lampType').style.border = '1px solid red';
-	var encourage = prompt ('Please Select Lamp Type.', '');
-		if (encourage != null && encourage != " ") {
-			document.forms [0] ['lampType'].value = encourage;
-			}return false;
-		} else {
-			document.getElementById('lampType').style.border = '1px solid #ccc';
+		var encourage = prompt ('Please Select Lamp Type.');
+			if (encourage != null && encourage != '') {
+				document.forms [0] ['lampType'].value = encourage;
+			}
+			return false;
+			} else {
+				document.getElementById('lampType').style.border = '1px solid #ccc';
 		}
 		
 	var getwattage = document.forms [0] ['wattage'].value;
-		if (getwattage == ' ') {
+		if (getwattage.length < 1) {
 			document.getElementById('wattage').style.border = '1px solid red';
-	var encourage = prompt ('Please Select Wattage.', '');
-		if (encourage != null && encourage != " ") {
-			document.forms [0] ['wattage'].value = encourage;
-			}return false;
-		} else {
-			document.getElementById('wattage').style.border = '1px solid #ccc';
-		}
-		
+			var encourage = prompt ('Please Select Wattage.');
+				if (encourage != null && encourage != '') {
+					document.forms [0] ['wattage'].value = encourage;
+			}
+			return false;
+			} else {
+					document.getElementById('wattage').style.border = '1px solid #ccc';
+		} 
+	
 	var getyourName = document.forms [0] ['yourName'].value;
-		if (getyourName == ' ') {
+		if (getyourName.length < 1) {
 			document.getElementById('yourName').style.border = '1px solid red';
-	var encourage = prompt ('Please Enter Your Name.', '');
-		if (encourage != null && encourage != " ") {
-			document.forms [0] ['yourName'].value = encourage;
-			}return false;
-		} else {
-			document.getElementById('yourName').style.border = '1px solid #ccc';
+		var encourage = prompt ('Please Enter Your Name.');
+			if (encourage != null && encourage != '') {
+				document.forms [0] ['yourName'].value = encourage;
+			}
+			return false;
+			} else {
+				document.getElementById('yourName').style.border = '1px solid #ccc';
 		}	
 		
 	var getdateRequired = document.forms [0] ['dateRequired'].value;
-		if (getdateRequired == ' ') {
+		if (getdateRequired == '') {
 			document.getElementById('dateRequired').style.border = '1px solid red';
-	var encourage = prompt ('Please Select Date Required.', '');
-		if (encourage != null && encourage != " ") {
-			document.forms [0] ['dateRequired'].value = encourage;
-			}return false;
-		} else {
-			document.getElementById('dateRequired').style.border = '1px solid #ccc';
+		var encourage = prompt ('Please Select Date Required.');
+			if (encourage != null && encourage != '') {
+				document.forms [0] ['dateRequired'].value = encourage;
+			}
+			return false;
+			} else {
+				document.getElementById('dateRequired').style.border = '1px solid #ccc';
 		}
 		alert('Form Submitted');		
-
 };

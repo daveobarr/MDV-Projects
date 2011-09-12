@@ -69,11 +69,11 @@ label
 	background: #3579DC;
 }
 
-input #yourName {  
+#yourName {  
   	background-color: #F2F2F2;  
 }  
 
-input #dateRequired {  
+#dateRequired {  
   	background-color: #F2F2F2;  
 } 
 input:focus
@@ -83,4 +83,8 @@ input:focus
 
 #submit {
   text-align: center;
+}
+
+#sub {
+	visibility: hidden;
 }
