@@ -13,7 +13,7 @@ function getItems(){
 	var delivery = 		localStorage.getItem('appdelivery');
 	var dateRequired = 	localStorage.getItem('appdateRequired');
 	var comments = 		localStorage.getItem('comments');
-
+	
 	var viewOrder = [
 		lampType,
 		wattage,
@@ -23,16 +23,37 @@ function getItems(){
 		dateRequired,
 		comments
 ];
+	
+		/*var glist = document.getElementById('glist');
+			while (glist.firstchild)
+			glist.removeChild(glist.firstChild);
+		var newUl = document.createElement('ul');
+		var newLis = document.createElement('li');
+			newUl.appendChild(newLis);
+		var lilTxt = document.createTextNode(itemName +'('+ itemQuantity + 'qty added to local storage)' );
+			newLis.appendChild(liTxt);
+			glist.appendChild(newUl);
+			
+		} else {
+		var itemName = 'Enter an item name';
+		}				
+		document.getElementById('lampType').value = lampType;
+		document.getElementById('wattage').value = wattage;	
+		document.getElementById('yourName').value = yourName;
+		document.getElementById('quantity').value = quantity;
+		document.getElementById('delivery').value = delivery;
+		document.getElementById('dateRequired').value = dateRequired;
+		document.getElementById('comments').value = comments;
+		*/
 
-document.getElementById('main').style.display = 'none';
+		document.getElementById('main').style.display = 'none';
 
 	var clearLink = document.getElementById('clear');
 		clearLink.style.display = 'block';	
-
-//alert(viewOrder);
-	}
-
+		
+	}	
 };
+
 
 
 function storeItems(id) {
@@ -52,11 +73,6 @@ function storeItems(id) {
 		localStorage.setItem('appdelivery',delivery);
 		localStorage.setItem('appdateRequired',dateRequired);
 		localStorage.setItem('appcomments',comments);
-		
-//alert("Saved");
-		
-		
-
 	
 };
 
@@ -68,24 +84,24 @@ function clearLocal() {
 function validateForm () {
 	var getlampType = document.forms [0] ['lampType'].value;
 		if (getlampType.length < 1) {
-			document.getElementById('lampType').style.border = '1px solid red';
+				document.getElementById('lampType').style.border = '1px solid red';
 		var encourage = prompt ('Please Select Lamp Type.');
 			if (encourage != null && encourage != '') {
 				document.forms [0] ['lampType'].value = encourage;
 			}
-			return false;
+				return false;
 			} else {
 				document.getElementById('lampType').style.border = '1px solid #ccc';
 		}
 		
 	var getwattage = document.forms [0] ['wattage'].value;
 		if (getwattage.length < 1) {
-			document.getElementById('wattage').style.border = '1px solid red';
+				document.getElementById('wattage').style.border = '1px solid red';
 			var encourage = prompt ('Please Select Wattage.');
 				if (encourage != null && encourage != '') {
 					document.forms [0] ['wattage'].value = encourage;
 			}
-			return false;
+				return false;
 			} else {
 					document.getElementById('wattage').style.border = '1px solid #ccc';
 		} 
@@ -97,21 +113,22 @@ function validateForm () {
 			if (encourage != null && encourage != '') {
 				document.forms [0] ['yourName'].value = encourage;
 			}
-			return false;
+				return false;
 			} else {
 				document.getElementById('yourName').style.border = '1px solid #ccc';
 		}	
 		
 	var getdateRequired = document.forms [0] ['dateRequired'].value;
 		if (getdateRequired == '') {
-			document.getElementById('dateRequired').style.border = '1px solid red';
+				document.getElementById('dateRequired').style.border = '1px solid red';
 		var encourage = prompt ('Please Select Date Required.');
 			if (encourage != null && encourage != '') {
 				document.forms [0] ['dateRequired'].value = encourage;
 			}
-			return false;
+				return false;
 			} else {
 				document.getElementById('dateRequired').style.border = '1px solid #ccc';
 		}
-		alert('Form Submitted');		
+				alert('Form Submitted');		
 };
+
