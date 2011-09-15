@@ -4,6 +4,7 @@
 	September 15, 2011 */
 	
 window.onload = getItems();
+
 function getItems(){
 	if (localStorage.getItem('applampType')){
 	var lampType = 		localStorage.getItem('applampType');
@@ -12,7 +13,8 @@ function getItems(){
 	var quantity = 		localStorage.getItem('appquantity');
 	var delivery = 		localStorage.getItem('appdelivery');
 	var dateRequired = 	localStorage.getItem('appdateRequired');
-	var comments = 		localStorage.getItem('comments');
+	var comments = 		localStorage.getItem('appComments');
+	
 	
 	var viewOrder = [
 		lampType,
@@ -23,29 +25,13 @@ function getItems(){
 		dateRequired,
 		comments
 ];
-	
-		/*var glist = document.getElementById('glist');
-			while (glist.firstchild)
-			glist.removeChild(glist.firstChild);
-		var newUl = document.createElement('ul');
-		var newLis = document.createElement('li');
-			newUl.appendChild(newLis);
-		var lilTxt = document.createTextNode(itemName +'('+ itemQuantity + 'qty added to local storage)' );
-			newLis.appendChild(liTxt);
-			glist.appendChild(newUl);
-			
-		} else {
-		var itemName = 'Enter an item name';
-		}				
-		document.getElementById('lampType').value = lampType;
-		document.getElementById('wattage').value = wattage;	
-		document.getElementById('yourName').value = yourName;
-		document.getElementById('quantity').value = quantity;
-		document.getElementById('delivery').value = delivery;
-		document.getElementById('dateRequired').value = dateRequired;
-		document.getElementById('comments').value = comments;
-		*/
 
+		document.getElementById('theLampType').innerHTML = lampType;
+		document.getElementById('theWattage').innerHTML = wattage;
+		document.getElementById('theYourName').innerHTML = yourName;
+		document.getElementById('theQuantity').innerHTML = quantity;
+		document.getElementById('theDelivery').innerHTML = delivery;
+		document.getElementById('theComments').innerHTML = comments;
 		document.getElementById('main').style.display = 'none';
 
 	var clearLink = document.getElementById('clear');
@@ -56,7 +42,7 @@ function getItems(){
 
 
 
-function storeItems(id) {
+function storeItems(id) { 	
 
 	var lampType = 		document.getElementById('lampType').value;
 	var wattage = 		document.getElementById('wattage').value;
@@ -65,7 +51,7 @@ function storeItems(id) {
 	var delivery = 		document.getElementById('delivery').value;
 	var dateRequired = 	document.getElementById('dateRequired').value;
 	var comments = 		document.getElementById('comments').value;
-			
+	
 		localStorage.setItem('applampType',lampType);
 		localStorage.setItem('appwattage',wattage);
 		localStorage.setItem('appyourName',yourName);
@@ -73,8 +59,14 @@ function storeItems(id) {
 		localStorage.setItem('appdelivery',delivery);
 		localStorage.setItem('appdateRequired',dateRequired);
 		localStorage.setItem('appcomments',comments);
-	
+		
+		alert('Saved');
+		document.getElementById('main').style.visibility = 'hidden';
+		document.getElementById('glist').style.visibility = 'visiable';
+		
 };
+
+
 
 function clearLocal() {
 	localStorage.clear();
@@ -129,6 +121,7 @@ function validateForm () {
 			} else {
 				document.getElementById('dateRequired').style.border = '1px solid #ccc';
 		}
-				alert('Form Submitted');		
+				storeItems(lampType, wattage, yourName, quantity, delivery, dateRequired, comments);		
 };
+
 

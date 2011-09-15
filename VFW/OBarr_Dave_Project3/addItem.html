@@ -30,11 +30,10 @@
 				
 				<label for="lampType">Lamp Type</label><br/>
 				<select id="lampType">
-					<option value=""></option>
-					<option value="incandescent">Incandescent</option>
-					<option value="fluorescent">Fluorescent</option>
-					<option value="hid">HID</option>
-					<option value="metal halide">Metal Halide</option>
+					<option value="Incandescent">Incandescent</option>
+					<option value="Fluorescent">Fluorescent</option>
+					<option value="HID">HID</option>
+					<option value="Metal Halide">Metal Halide</option>
 					
      	  		</select><br/>
      	  
@@ -42,7 +41,6 @@
 				
 				<label for="wattage">Wattage</label><br/>
   				<select id ="wattage">
-  			  		<option value=""></option>
   			  		<option value="10 Watt">10 Watt</option>
   			  		<option value="25 Watt">25 Watt</option>
   			  		<option value="50 Watt">50 Watt</option>
@@ -53,24 +51,24 @@
   			 	<br/>
   			 	
   			 	<label for="yourName">Your Name</label>
-  				<input type="text" name="yourName" size="30" value="" id="yourName"/><br />
+  					<input type="text" name="yourName" size="30" value="" id="yourName"/><br />
   				<br/>
 				
 				<label for="quantity">Quantity</label><br/>
-				<input type="range" name="rating" min="1" max="1000" value="1" id="quantity" /><br />
+					<input type="range" name="rating" min="1" max="1000" value="1" id="quantity" /><br />
   				<br/>
   				
   				<label for="delivery">Check If Delivery Is Required</label>
-  				<input type ="checkbox" name="delivery" id="delivery" />
+  					<input type ="checkbox" name="delivery" id="delivery" />
   				<br/><br/>
   				
   				
   				<label for="dateRequired">Date Required</label>
-  				<input type ="date" name="dateRequired" value="09/01/2011" id="dateRequired"/><br/>
+  					<input type ="date" name="dateRequired" value="09/01/2011" id="dateRequired"/><br/>
   				<br/>
   				
   				<label for="comments">Comments</label>
-  				<textarea rows="10" cols="30" id="comments" ></textarea><br/>
+  					<textarea rows="10" cols="30" id="comments" ></textarea><br/>
  	 			<br/>
  	 			
  	 			<p id="submit"><input type="submit" value="PLACE ORDER" /></p>
@@ -81,21 +79,18 @@
 		
 	<form>
 		<fieldset id= "glist">
-			<ul id= 'items'>
-				<li>Item 1</li>
-				<li>Item 2</li>
-				<li>Item 3</li>
-				<li>Item 4</li>
-				<li>Item 5</li>
+			<ul id= "items">
+				<li id= theLampType>Item 1</li>
+				<li id= theWattage>Item 2</li>
+				<li id= theYourName>Item 3</li>
+				<li id= theQuantity>Item 4</li>
 			</ul>
-			
 		</fieldset>	
 	</form>	
 			<p id="clear">
 				<a onmousehover = "mouseHover();" onmouseout = "mouseOut();" href = "#" onclick = "clearLocal();
-				location.reload();">Clear Local Storage</a>
+					location.reload();">Clear Local Storage</a>
 			</p>	
-		
 		<script type="text/javascript" src="js/main.js"></script>
 		
 	</body>
